@@ -1,0 +1,77 @@
+.dig_solution{
+    width: 100%; height: auto;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+#dig_sol_text{
+    width: 90%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#dig_sol_text > div > p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5vw;
+    height: 1.8em;
+    padding: 0px; margin: 0px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+#dig_sol_text > p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 0px; margin: 0px;
+    font-weight: bold;
+    line-height: 1.5em;
+    text-align: center;
+    color: rgb(75, 75, 75);
+}
+#gotoIconContainer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: auto;
+}
+#gotoIconContainer > div{
+    margin-top: 5px; margin-bottom: 0px;
+    margin-left: 5px; margin-right: 5px;
+    box-sizing: border-box;
+    position: relative;
+    width: 300px;
+    height: 350px;
+}
+#gotoIconContainer > div > div{
+    width: 100%;
+    padding: 25px; height: fit-content;
+    box-sizing: border-box;
+    text-align: center;
+    transition-property: margin;
+    transition-duration: 0.3s;
+}
+#gotoIconContainer > div > div > p{
+    margin: 0px;
+}
+#gotoIconContainer > div > div > img + p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    line-height: 150%;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+#gotoIconContainer > div > div > img{
+    height: 60px;
+}
+#gotoIconContainer > div > div > p + p {
+    font-size: 18px;
+    line-height: 130%;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+}

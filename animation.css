@@ -1,0 +1,36 @@
+@keyframes animate_scrolldown{
+    from{top:0px;}
+    to{top:10px;}
+}
+@keyframes animate_background{
+    from{
+        transform: scale(1.5);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@keyframes animate_floatHomeIcon{
+    from{
+        top: -4px;
+    }
+    to{
+        top: 8px;
+    }
+}
+@keyframes animate_hide_floatHomeIcon{
+    from{
+        margin-right: -45px;
+    }
+    to{
+        margin-right: 0px;
+    }
+}
+@keyframes animate_show_floatHomeIcon{
+    from{
+        margin-right: 0px;
+    }
+    to{
+        margin-right: -45px;
+    }
+}

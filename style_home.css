@@ -1,0 +1,235 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+}
+#bookmark{
+    width: 30px; height: 160px;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0, 0.5);
+    position: fixed;
+    top:calc(50% - 80px);
+    right: 10px;
+    z-index: 100;
+}
+#bookmark > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    box-sizing: border-box;
+    width: 9px; height: 9px;
+    border-radius: 100%;
+    background-color: white;
+    position: absolute;
+    left: calc(50% - 4.5px);
+    transition-property: width , height , margin;
+    transition-duration: 0.13s;
+}
+#bookmark > a:hover{
+    width: 13px; height: 13px;
+    margin-top:-2px; margin-left: -2px;
+}
+#rdo1{top:22.1666px;}
+#rdo2{top:48.8333px;}
+#rdo3{top:75.5px;}
+#rdo4{top:102.1666px;}
+#rdo5{top:128.8333px;}
+
+#bookmark > a > p{
+    width: max-content;
+    margin: 0px;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.5);
+    position: absolute;
+    right: 23px;
+    display: none;
+}
+#bookmark > a > div{
+    margin: 0px;
+    width: 100%; height: 100%;
+    border-radius: 100%;
+    position: absolute;
+}
+#floatHomeIcon{
+    margin-right: -45px;
+    width: 40px; height: 40px;
+    background-color: rgb(0, 0, 0, 0.6);
+    border-radius: 100%;
+    position: fixed;
+    bottom: calc(10% - 25px);
+    right: 5px;
+    overflow: hidden;
+    z-index: 100;
+    animation-duration: 1s;
+}
+#floatHomeIcon:hover{
+    filter: invert(1);
+    box-shadow: 1px 1px 5px white;
+}
+#floatHomeIcon:active{
+    filter: invert(0);
+    background-color: yellow;
+}
+#floatHomeIcon > img{
+    position: relative;
+    transform: scaleY(-1);
+    animation-name: animate_floatHomeIcon;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+.home{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+#bgimage{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    object-fit: cover;
+    animation-name: animate_background;
+    animation-duration: 15s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+.home > div{
+    width:100%;
+}
+#box1{
+    z-index: 2;
+}
+#con_1{
+    padding: 10px;
+    box-sizing: border-box;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    transition-property: transform;
+    transition-duration: 1s;
+    width: 20%;
+}
+#logo > img{
+    width: 100%;
+}
+#links{
+    width: fit-content;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#links > a , #goto_block{
+    margin-left: 15px; margin-right: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.13vw; font-weight: bold;
+    color: white;
+    position: relative;
+}
+#goto_block:hover .goto{
+    visibility: visible;
+}
+.goto{
+    visibility: hidden;
+    position: absolute;
+    top:0px; left: -20px;
+    width: max-content; height:fit-content;
+    margin-top: 30px;
+    padding:1.5em;
+    background-color: white;
+    border-radius: 5px;
+    z-index: 2;
+    transition: 0.5s;
+    box-shadow: 1px 2px 5px black;
+}
+.goto > p{
+    line-height: 2.7em;
+    margin:0px;
+    font-size: 11pt;
+}
+.goto > p > a:hover{
+    color: lightseagreen;
+}
+#contacts{
+    width: fit-content; height: 2em;
+    padding-left: 1em; padding-right: 1em;
+    background-color: white;
+    border:1px solid black;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menu{
+    width: 30px; height: 30px;
+    filter: invert(100%);
+    position: absolute;
+    right: 0px;
+    padding: 3px;
+    display: none;
+}
+.home > div + p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 6.5vw;
+    font-weight: bold;
+    line-height: 130%;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px gray;
+}
+#new_line{
+    display: none;
+}
+#learn_about{
+    width: fit-content;
+    height: 2em;
+    padding-left: 1em; padding-right: 1em;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#scrolldown{
+    width:30px; height: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+#scrolldown > a > img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-name: animate_scrolldown;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

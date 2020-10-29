@@ -1,0 +1,52 @@
+@media (max-width:1500px){
+    #logo {
+        width: 23%;
+    }
+}
+@media (max-width:1200px){
+    #logo {
+        width: 25%;
+    }
+}
+@media (max-width:900px){
+    #logo > img{
+        margin-left: calc(-50% - 8px);
+        transform:scale(1.5);
+    }
+    #logo{
+        width: 20%;
+        transform: translateX(50vw);
+    }
+    #links , #contacts{
+        display: none;
+    }
+    #contacts{
+        font-size: 9pt;
+    }
+    #menu{
+        display: block;
+    }
+}
+@media (max-width:800px){
+    #logo > img{
+        transform:scale(1.8);
+    }
+}
+@media (max-width:700px){
+    #bookmark{
+        transform: scale(0.7);
+    }
+    #floatHomeIcon{
+        transform: scale(0.7);
+    }
+}
+@media (max-width:600px){
+    #logo > img{
+        transform:scale(2);
+    }
+}
+@media (max-width:500px){
+    #logo > img{
+        transform:scale(2.4);
+    }
+}
